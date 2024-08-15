@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #9c9c9c;
+    margin: 0;
+    padding: 0;
+}
+.c-white{
+    background-color: white;
+}
+.bg-light-grey{
+    background-color: #f4f4f4;
+}
+.bg-white{
+    background-color: white;
+}
+.bg-black{
+    background-color: black;
+}
+h1, h2{
+    margin-top: 0;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    text-transform: uppercase;
+    color: #444;
+    font-size: 32px;
+}
+p{
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.inner{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+button {
+    background-color: transparent;
+    border: 2px solid #444;
+    border-radius: 4px;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 15px 50px;
+    font-size: 10px;
+    transition: all .3s ease-out;
+}
+  
+button:hover {
+    border-color: #ef6480;
+    color: #ef6480;
+}
+.first-wrapper{
+    padding: 150px 0;
+    color: white;
+}
+.first-wrapper .inner{
+    width: 45%;
+}
+.first-wrapper h1{
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+}
+.second-wrapper{
+    padding: 80px 0;
+}
+.second-wrapper .inner{
+    border-radius: 4px;
+    padding: 80px 0;
+}
+.second-wrapper .icon{
+    padding: 20px;
+    text-align: center;
+    border: 2px solid black;
+    display: inline-block;
+    margin-bottom: 30px;
+    border-radius: 50%;
+}
+.second-wrapper p{
+    margin-bottom: 30px;
+}
+.second-wrapper .content-box{
+    width: 60%;
+    margin: 0 auto;
+}
+.third-wrapper{
+    padding: 80px 0;
+    background-color: white;
+}
+.third-wrapper .content-box{
+    border: 2px solid black;
+    padding: 50px 0;
+    border-radius: 4px;
+}
+.third-wrapper .social{
+    margin-top: 30px;
+}
+.third-wrapper a{
+    display: inline-block;
+    text-decoration: none;
+    color: #444;
+    margin-right: 15px;
+    transition: color .3s ease-out;
+}
+.third-wrapper a:hover {
+     color: #ef6480; 
+}
+.footer{
+    padding: 150px 0;
+}
+.footer p{
+    margin-bottom: 30px;
+    color: white;
+}
+.footer h2{
+    color: white;
+}
+.footer form {
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 30px 20px;
+    text-align: left;
+}
+.footer form .form-row {
+     margin-bottom: 20px;
+}
+.footer form label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.footer form input{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #d9d9d9;
+}
+.footer button{
+    width: 100%;
+}
