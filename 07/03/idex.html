@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("enter a number between 1 and 7"));
+        let title = document.createElement('h1');
+        title.style.color = "green";
+        switch(num){
+            case 1:
+                title.innerText = "its moday"
+                break;
+            case 2:
+                    title.innerText = "its thusday"
+                    break;
+            case 3:
+                title.innerText = "its wednesday"
+                break;
+            case 4:
+                title.innerText = "its thursday"
+                break;
+            case 5:
+                title.innerText = " its friday"
+                break;
+            case 6:
+                title.innerText = "its saturday"
+                break;
+            case 7:
+                title.innerText = "its sunday"
+                break;
+            default:
+                title.innerText = "wrong data"
+                title.style.color = "tomato";
+                break;
+        }
+        document.body.appendChild(title);
+    </script>
+</body>
+</html>

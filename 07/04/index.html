@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="hamburger-icon"></button>
+    <h1></h1>
+    <script>
+        let time = parseInt(prompt("enter the time in seconds"));
+        if(!isNaN(time)) {
+            let hour = Math.floor(time/3600);
+            let r = time % 3600;
+            let min = Math.floor(r/60);
+            let sec = r % 60;
+            let heading = document.querySelector('h1');
+            heading.innerText = `the time is ${hour}h:${min}min:${sec}sec`;
+            heading.setAttribute('style', 'text-decoration: underline', 'text-align: center;');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let hour = prompt("enter hour between 0 and 24");
+        if(hour >= 0 && hour <= 24){
+            if(hour == 0 || hour == 24){
+                console.log('its 12am');
+            } else if(hour == 12){
+                console.log('its 12pm');
+            } else if (hour >=1 && hour<=11){
+                console.log('its ${hour}am');
+            } else if (hour >=13 && hour <=23){
+                console.log('its $(hour-12)pm');
+            }
+            let img = document.createElement('img');
+            if(hour >=6 && hour< 18){
+                img.setAttribute('src', './img/sun.png');
+            } else{
+                img.setAttribute('src', './img/moon.png');
+            }
+            document.body.appendChild(img);
+        } else{
+            alert("you have entered a wrong number for hour")
+        }
+    </script>
+</body>
+</html>
