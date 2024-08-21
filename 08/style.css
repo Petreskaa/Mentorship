@@ -1,0 +1,5 @@
+.post-img { flex-shrink: 0; }
+
+.content p { font-size: 14px; }
+
+.posts-cont a { flex: 0 0 100%; }
