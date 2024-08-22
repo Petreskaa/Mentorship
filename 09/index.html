@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Latest compiled and minified Bootstrap 4.4.1 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row my-5">
+        <div class="col-6 offset-3 text-center">
+          <h1>Your Activities for today</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 offset-3 table-container"></div>
+      </div>
+    </div>
+
+    <script>
+      // Exercise I - create the table dinamicly
+      let activities = [
+        ["Work", 8],
+        ["Eat", 3],
+        ["Commute", 2],
+        ["Play Game", 1],
+        ["Workout", 2],
+        ["Sleep", 8],
+      ];
+
+      let table = document.createElement("table");
+      table.setAttribute(
+        "class",
+        "table table-bordered table-dark table-striped"
+      );
+      let thead = document.createElement("thead");
+      let tbody = document.createElement("tbody");
+
+      // let headingsRow = document.createElement('tr');
+      // let indexHeadingCol = document.createElement('th');
+      // let activityHeadingCol = document.createElement('th');
+      // let hoursHeadingCol = document.createElement('th');
+
+      // indexHeadingCol.innerText = 'Index';
+      // activityHeadingCol.innerText = 'Activity';
+      // hoursHeadingCol.innerText = 'Hours';
+
+      // headingsRow.appendChild(indexHeadingCol);
+      // headingsRow.appendChild(activityHeadingCol);
+      // headingsRow.appendChild(hoursHeadingCol);
+
+      //Exercise II
+      // let headingsPercentageCol = document.createElement('th');
+      // headingsPercentageCol.innerText = 'Percentage';
+      // headingsRow.appendChild(headingsPercentageCol);
+
+      // // Exercise IV
+      let headingsRow = createRow("Index", "Activity", "Hours", "% of the day", 'th');
+
+      thead.appendChild(headingsRow);
+
+      table.appendChild(thead);
+      table.appendChild(tbody);
+
+      // for (let i = 0; i < activities.length; i++) {
+      //     // let tr = document.createElement('tr');
+      //     // let indexCol = document.createElement('td');
+      //     // let activityCol = document.createElement('td');
+      //     // let hoursCol = document.createElement('td');
+
+      //     // indexCol.innerText = i;
+      //     // activityCol.innerText = activities[i][0];
+      //     // hoursCol.innerText = activities[i][1];
+
+      //     // tr.appendChild(indexCol);
+      //     // tr.appendChild(activityCol);
+      //     // tr.appendChild(hoursCol);
+      //     // tbody.appendChild(tr);
+
+      //     // // Exercise II - calculate the percentage of hours you've spend on activities in one day
+      //     // let percentageHours = document.createElement('td');
+      //     // let percentage = Math.floor((activities[i][1] / 24) * 100) + '%';
+      //     // activities[i].push(percentage);
+      //     // percentageHours.innerText = percentage;
+      //     // tr.appendChild(percentageHours); // add to the html
+
+      //     // // // Exercise IV
+      //     let percentage = Math.floor((activities[i][1] / 24) * 100) + '%';
+      //     activities[i].push(percentage);
+      //     let bodyRow = createRow(i, activities[i][0], activities[i][1], percentage, "td");
+      //     tbody.appendChild(bodyRow);
+      // }
+
+      // Exercise V
+      populateBody();
+      // console.log(activities);
+
+      document.querySelector(".table-container").appendChild(table);
+
+      // __________________________________________________________________________
+
+      //Exercise III - removed the activity which has index 2 from the array (using array method) and also update the table (not showing that activity)
+      activities.splice(2, 1);
+
+      console.log(activities);
+
+      tbody.innerHTML = "";
+
+      // for (let i = 0; i < activities.length; i++) {
+      //     // let tr = document.createElement('tr');
+      //     // let indexCol = document.createElement('td');
+      //     // let activityCol = document.createElement('td');
+      //     // let hoursCol = document.createElement('td');
+
+      //     // indexCol.innerText = i;
+      //     // activityCol.innerText = activities[i][0];
+      //     // hoursCol.innerText = activities[i][1];
+
+      //     // tr.appendChild(indexCol);
+      //     // tr.appendChild(activityCol);
+      //     // tr.appendChild(hoursCol);
+      //     // tbody.appendChild(tr);
+
+      //     // // Exercise II - calculate the percentage of hours you've spend on activities in one day
+      //     // let percentageHours = document.createElement('td');
+      //     // let percentage = Math.floor((activities[i][1] / 24) * 100) + '%';
+      //     // percentageHours.innerText = percentage;
+      //     // activities[i].push(percentage);
+      //     // tr.appendChild(percentageHours);
+
+      //     // // // Exercise IV
+      //     let percentage = Math.floor((activities[i][1] / 24) * 100) + '%';
+      //     activities[i].push(percentage);
+      //     let bodyRow = createRow(i, activities[i][0], activities[i][1], percentage, "td");
+      //     tbody.appendChild(bodyRow);
+      // }
+
+      // Exercise V
+      populateBody();
+      // console.log(activities);
+
+      // Exercise IV
+      function createRow(
+        firstColText,
+        secondColText,
+        thirdColText,
+        fourthColText,
+        whatCellToCreate
+      ) {
+        let row = document.createElement("tr");
+        let firstCol = document.createElement(whatCellToCreate);
+        let secondCol = document.createElement(whatCellToCreate);
+        let thirdCol = document.createElement(whatCellToCreate);
+        let forthCol = document.createElement(whatCellToCreate);
+
+        firstCol.innerText = firstColText;
+        secondCol.innerText = secondColText;
+        thirdCol.innerText = thirdColText;
+        forthCol.innerText = fourthColText;
+
+        row.appendChild(firstCol);
+        row.appendChild(secondCol);
+        row.appendChild(thirdCol);
+        row.appendChild(forthCol);
+
+        return row;
+      }
+
+      // Exercise V
+      function populateBody() {
+        for (let i = 0; i < activities.length; i++) {
+          let percentage = Math.floor((activities[i][1] / 24) * 100) + "%";
+
+          if (activities[i][2] === undefined) {
+            activities[i].push(percentage);
+          }
+
+          let bodyRow = createRow(i,activities[i][0],activities[i][1],percentage,'td');
+          tbody.appendChild(bodyRow);
+        }
+      }
+    </script>
+  </body>
+</html>
