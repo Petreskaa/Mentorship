@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- Latest compiled and minified Bootstrap 4.4.1 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container my-5 text-center">
+      <div class="row">
+        <div class="col mb-5">
+          <h1>Lorem ZOO</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 offset-1">
+          <div class="row">
+            <div class="col">
+              <h2 class="h3 mb-3">Add / Remove Animal</h2>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-toggle="modal"
+                data-target="#animal-modal"
+              >
+                Add Animal
+              </button>
+              <button class="btn btn-danger" id="remove-all">Remove All</button>
+            </div>
+            <div class="col filters">
+              <h2 class="h3 mb-3">Filter by age</h2>
+              <button class="btn btn-secondary" data-age="all">Show all</button>
+              <button class="btn btn-warning" data-age="4">Age 4</button>
+              <button class="btn btn-success" data-age="5">Age 5</button>
+              <button class="btn btn-info" data-age="6">Age 6</button>
+              <button class="btn btn-dark" data-age="7">Age 7</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row boxes-wrapper"></div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="animal-modal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add animal</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="animal-name">Animal Name:</label>
+              <input type="text" id="animal-name" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="animal-img">Animal Image URL:</label>
+              <input type="text" class="form-control" id="animal-img" />
+              <small>Preffered image size: 400x300</small>
+            </div>
+            <div class="form-group">
+              <label for="animal-age">Animal Age:</label>
+              <input type="number" class="form-control" id="animal-age" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="add-animal" data-dismiss="modal">
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery library -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Latest Compiled Bootstrap 4.4.1 JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
